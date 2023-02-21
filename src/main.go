@@ -1,30 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+func areaCirculo(radio float64) float64 {
+	return math.Pi * radio * radio
+}
+func areaRectangulo(base float64, altura float64) float64 {
+	return base * altura
+}
+
+func areaTrapezoide(B float64, b float64, h float64) float64 {
+	return h * (B + b) / 2
+}
 
 func main() {
-	// fmt.Println("Hola mundo")
+	fmt.Printf("Circulo %.2f \n", areaCirculo(2))
+	fmt.Printf("Rectangulo %.2f \n", areaRectangulo(5, 10))
+	fmt.Printf("Trapezoide %.2f \n", areaTrapezoide(10, 5, 3))
 
-	// Declaración de constantes
-	const pi float64 = 3.14
-	const pi2 = 3.1416
-
-	// fmt.Println("pi:", pi)
-	// fmt.Println("pi2:", pi2)
-
-	// Declaración de variables enteras
-	base := 12
-	var altura int = 14
-	var area int
-
-	area = base * (altura / 2)
-	fmt.Println("Area:", area)
-
-	// Zero values
-	var a int
-	var b float64
-	var c string
-	var d bool
-
-	fmt.Println(a, b, c, d)
 }
